@@ -23,3 +23,12 @@ router.put("/:id", protect, authorize("Admin", "Doctor"), AppointmentController.
 router.delete("/:id", protect, authorize("Admin"), AppointmentController.delete);
 
 export default router;
+
+
+
+
+
+
+
+
+
