@@ -1,4 +1,3 @@
-
 import { Doctor } from "./doctor.model";
 import { hashPassword } from "../../utils/hash";
 
