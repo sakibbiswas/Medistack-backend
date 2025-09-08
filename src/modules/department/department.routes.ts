@@ -1,4 +1,3 @@
-
 import express from "express";
 import { DepartmentController } from "./department.controller";
 import { protect, authorize } from "../../middlewares/auth.middleware";
