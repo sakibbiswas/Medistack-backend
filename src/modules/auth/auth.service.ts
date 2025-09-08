@@ -1,5 +1,3 @@
-
-// backend/src/modules/auth/auth.service.ts
 import bcrypt from "bcryptjs";
 import jwt, { SignOptions, Secret } from "jsonwebtoken";
 import { User } from "../user/user.model";
