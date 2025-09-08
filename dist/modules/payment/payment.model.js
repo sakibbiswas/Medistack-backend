@@ -39,8 +39,9 @@ const paymentSchema = new mongoose_1.Schema({
     appointmentId: { type: mongoose_1.Schema.Types.ObjectId, ref: "Appointment", required: true },
     patientId: { type: mongoose_1.Schema.Types.ObjectId, ref: "User", required: true },
     amount: { type: Number, required: true },
-    method: { type: String, enum: ["Cash", "Online"], required: true },
     status: { type: String, enum: ["Pending", "Completed", "Failed"], default: "Pending" },
+    method: { type: String, enum: ["Stripe", "Cash", "Other"], required: true },
+    transactionId: { type: String },
     createdAt: { type: Date, default: Date.now },
 });
 exports.Payment = mongoose_1.default.model("Payment", paymentSchema);
