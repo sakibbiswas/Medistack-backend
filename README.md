@@ -50,6 +50,19 @@ It supports Patients, Doctors, and Admins with secure authentication, appointmen
 
 `Payments dashboard with transaction ID, method, and status`
 
+## Admin Analytics
+`Total counts of users, doctors, appointments, and payments`
+
+`Total revenue`
+
+`Appointments per day (last 7 days)`
+
+`Revenue per month (last 6 months)`
+
+`Top doctors by number of appointments`
+
+`Top patients by number of appointments`
+
 ## 🔹 Payment Integration
 
 `Cash Payment`
@@ -98,6 +111,17 @@ It supports Patients, Doctors, and Admins with secure authentication, appointmen
 
 `GET /api/v1/payments/:id → Payment status`
 
+## Admin Analytic Endpoints
+
+| Method                                                 | Description                                                     | Returns                                                                        |
+| ------------------------------------------------------ | --------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `AnalyticsService.getTotals()`                         | Total counts of users, doctors, appointments, payments, revenue | `{ usersCount, doctorsCount, appointmentsCount, paymentsCount, totalRevenue }` |
+| `AnalyticsService.getAppointmentsPerDay(days: number)` | Last N days appointment count                                   | `[ { date, count } ]`                                                          |
+| `AnalyticsService.getRevenuePerMonth(months: number)`  | Revenue for last N months                                       | `[ { month, revenue } ]`                                                       |
+| `AnalyticsService.getTopDoctors(limit: number)`        | Top doctors by appointments                                     | `[ { doctorId, name, specialization, count } ]`                                |
+| `AnalyticsService.getTopPatients(limit: number)`       | Top patients by appointments                                    | `[ { patientId, name, email, count } ]`                                        |
+
+
 #### 🧪 Testing with Postman
 
 `Import the included Postman Collection (if provided)`
@@ -108,6 +132,8 @@ It supports Patients, Doctors, and Admins with secure authentication, appointmen
 
 `Authorization: Bearer <your_token>`
  
+
+
 
 ## ⚡ Installation & Setup
 1️⃣ Clone the Repository
