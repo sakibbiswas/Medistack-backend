@@ -1,4 +1,3 @@
-
 import express from "express";
 import { DoctorController } from "./doctor.controller";
 import { protect, authorize } from "../../middlewares/auth.middleware";
