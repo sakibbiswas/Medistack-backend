@@ -1,4 +1,3 @@
-
 import { Payment } from "./payment.model";
 import crypto from "crypto";
 
