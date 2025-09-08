@@ -1,5 +1,3 @@
-
-
 import { Request, Response } from "express";
 import { DepartmentService } from "./department.service";
 import { Doctor } from "../doctor/doctor.model";
