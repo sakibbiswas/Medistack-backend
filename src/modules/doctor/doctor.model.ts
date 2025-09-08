@@ -5,7 +5,7 @@ export interface IDoctor extends Document {
   email: string;
   password: string;
   specialization: string;
-  departmentId: Types.ObjectId; // Changed from string to Types.ObjectId
+  departmentId: Types.ObjectId; 
   availableSlots: string[];
   role: "Doctor";
   createdAt: Date;
