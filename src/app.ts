@@ -26,6 +26,15 @@ connectDB();
 
 // Middlewares
 app.use(cors());
+
+app.use(
+  cors({
+    origin: ['http://localhost:5173', 'https://medistack-frontend.vercel.app'],
+    credentials: true,
+   }),
+   
+);
+
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
