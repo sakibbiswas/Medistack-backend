@@ -19,6 +19,7 @@ const doctor_routes_1 = __importDefault(require("./modules/doctor/doctor.routes"
 const appointment_routes_1 = __importDefault(require("./modules/appointment/appointment.routes"));
 const department_routes_1 = __importDefault(require("./modules/department/department.routes"));
 const payment_routes_1 = __importDefault(require("./modules/payment/payment.routes"));
+const analytics_routes_1 = __importDefault(require("./modules/analytics/analytics.routes"));
 const app = (0, express_1.default)();
 // Connect to MongoDB
 (0, db_1.default)();
@@ -39,6 +40,7 @@ app.use("/api/v1/doctors", doctor_routes_1.default);
 app.use("/api/v1/appointments", appointment_routes_1.default);
 app.use("/api/v1/departments", department_routes_1.default);
 app.use("/api/v1/payments", payment_routes_1.default);
+app.use("/api/v1/admin/analytics", analytics_routes_1.default);
 // Health check
 app.get("/", (_req, res) => res.send("MediStack++ Backend is running"));
 // Error Handler

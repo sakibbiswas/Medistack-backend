@@ -17,7 +17,7 @@ class DoctorService {
             password: hashed,
             availableSlots: Array.isArray(data.availableSlots)
                 ? data.availableSlots
-                : [], // ✅ Always array
+                : [], //  Always array
         });
         return await doctor.save();
     }
