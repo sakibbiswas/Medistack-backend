@@ -17,13 +17,14 @@ import appointmentRoutes from "./modules/appointment/appointment.routes";
 import departmentRoutes from "./modules/department/department.routes";
 import paymentRoutes from "./modules/payment/payment.routes";
 
+import analyticsRoutes from "./modules/analytics/analytics.routes";
 const app = express();
 
 // Connect to MongoDB
 connectDB();
 
 // Middlewares
-// app.use(cors());
+app.use(cors());
 
 app.use(
   cors({
@@ -45,7 +46,7 @@ app.use("/api/v1/doctors", doctorRoutes);
 app.use("/api/v1/appointments", appointmentRoutes);
 app.use("/api/v1/departments", departmentRoutes);
 app.use("/api/v1/payments", paymentRoutes);
-
+app.use("/api/v1/admin/analytics", analyticsRoutes);
 // Health check
 app.get("/", (_req, res) => res.send("MediStack++ Backend is running"));
 
