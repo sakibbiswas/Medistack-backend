@@ -1,4 +1,3 @@
-
 import express from "express";
 import { PaymentController } from "./payment.controller";
 import { protect, authorize } from "../../middlewares/auth.middleware";
