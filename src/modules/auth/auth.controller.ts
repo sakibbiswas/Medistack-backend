@@ -1,4 +1,3 @@
-
 import { Request, Response } from "express";
 import { AuthService } from "./auth.service";
 import { successResponse, errorResponse } from "../../utils/response";
